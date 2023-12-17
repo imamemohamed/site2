@@ -1,0 +1,190 @@
+<!DOTYPE html>
+    <html lang="fr-FR">
+        <head>
+            <title>acceuil</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="style.css">
+            <meta name=”description" content="presentation de Mohamed Imame">
+             <!-- la description donnt on souhaite que la moteur de recherche affiche-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        </head>
+        <body>
+            <!--trois element struturant : divise le contenu du page )-->
+            <header>
+               <h1> Mohamed Imame</h1> 
+            </header>
+            <nav>
+                <div class="table"><!-- ce dive va nous permettre de centrer le menu et rendre sa hauteur
+                        car un element html possede des enfants qui sont foatant en css,la hauteur de cette element
+                          va egale à zero.donc on utilise diplay= valeur de class de div-->
+                    <ul>
+                        <!--menu- etc pour mettre chaque li sa forme specifique-->
+                        <li class="menu-ind">
+                            <a href="index.html">Acueil</a> 
+                        </li>
+                        <li class="menu-ex">
+                            <a href="experience.html">expériences<!-- professionnelles--></a>
+                        </li>
+                        <li class="menu-loi">
+                            <a href="ouff.html">Loisir</a>
+                        </li>
+                        <li class="menu-cont">
+                            <a href="contact.html">contactez-moi!</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <article>
+                
+                <section class="presentation">
+                    <!--ma photo à gauche et un texte à droite-->
+                    <!--je veux couper cette section en deux donc,
+                    -- je vais utiliser deux div(left et right)-->
+                    
+                    <h1>Qui suis-je?</h1> <!--titre de section-->
+                    <div class="sec"><!--un div pour mettre en forme cette section
+                            qui contient les deux sous div-->
+                        <div class="left">
+                             <img class="im1" src="image/_CLX4059.jpg" alt="mon image">
+                        </div>
+                        <div class="right">
+                             <p> je m'appelle Mohamed Imame, j'ai 22 ans,je suis un etudiant en FST.</p>
+                             <p>et je vis à madagascar</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="parcours">
+                                <!-- cette section va être separer en deux-->
+                                <!-- date à gauche et les experiences à droite-->
+                                
+                                <!-- pour alligner la date à l'experience correspondant , on utilise un
+                                   un div intermediaire( il contient la date et l'evenement )-->
+                            
+                        <h1> Parcours et experiences</h1> <!-- titre de section -->
+                        <div class="sec"> <!--le div de section-->
+                    
+                            <h2> Experience professionnelles</h2>
+                            <div class="exp"> <!--le div intermediaire-->
+                                   <div class="left">
+                                           <h3>2019-2020</h3>  
+                                   </div>
+                                   <div class="right">
+                                           <h3> (génetique mendelieen) des pigeaons</h3>
+                                           <p> elevateurs des pigeons </p>
+                                   </div>
+                            </div>
+                            <div class="exp"> <!--le div intermediaire-->
+                                   <div class="left">
+                                           <h3>2023</h3>  
+                                   </div>
+                                   <div class="right">
+                                           <h3>debute ma curcus de l'informatique</h3>
+                                           <p class="classname"></p>> theorie et pratique</p>
+                                   </div>
+                            </div>
+                         
+                            <!--sous section(mais meme demarche)-->
+                            <h2> parcours scolaire</h2>
+                            <div class="exp"> <!--le div intermediaire-->
+                                       <div class="left">
+                                           <h3>2023-2024</h3>  
+                                       </div>
+                                       <div class="right">
+                                           <h3>Application des langages informatique avec mathematique appliqué</h3>
+                                           <p> creation des sites responsives</p>
+                                       </div>
+                            </div>
+                            <div class="exp"> <!--le div intermediaire-->
+                                       <div class="left">
+                                           <h3>2019-2020</h3>  
+                                       </div>
+                                       <div class="right">
+                                           <h3>concours du bac</h3>
+                                           <p class="classname"></p>> obtention du BAC</p>
+                                       </div>
+                            </div>
+                        </div>
+                </section>
+                
+                <section class="competences">
+                    <!-- on a besoin d'afficher deux competances sur la meme ligne
+                    on separe la section en deux parties (cleft,cright)
+                    et separer chacune de ses deux sous partie à nouveau-->
+
+                    <h1> Compétances et nouveaux</h1>
+                    <div class="sec"><!-- le div intermediaire des section( cleft et cright)
+                            permet de mettre en forme toute nos section avec la meme format-->
+                            
+                            <!--remaque : dans tout nos section on a qu'un seul div intermediaire(sec)-->
+                      
+                        <div class="cleft"><!--le div qui sera à gauche-->
+                            <!-- on divise ce div  par 2 sous div(sous left et sous right)-->
+                           <div class="sous">
+                                <div class="sousleft"><h3> Compétances</h3></div>     
+                                <div class="sousright"><h3> Niveaux</h3></div>
+                           </div>
+                           <div class="sous">
+                                <div class="sousleft"><P> HTML/CSS</P></div>     
+                                <div class="sousright"><P>Intermediaire</P></div>         
+                           </div>
+                           <div class="sous">
+                                <div class="sousleft"><P> Informatique Bureautique</P></div>     
+                                <div class="sousright"><P>avancé</P></div>         
+                           </div>
+                          
+                        </div>
+                        <div class="cright"><!--le div qui sera à DROIT-->
+                                <div class="sous">
+                                    <div class="sousleft"><h3> Compétances</h3></div>     
+                                    <div class="sousright"><h3> Niveaux</h3></div>
+                                </div>    
+                                <div class="sous">
+                                    <div class="sousleft"><P>Maintenance</P></div>     
+                                    <div class="sousright"><P> Débutant</P></div>         
+                                </div>
+                                <div class="sous">
+                                    <div class="sousleft"><P> PHP</P></div>     
+                                    <div class="sousright"><P>Débutant</P></div>         
+                                </div>
+                        </div>
+                        
+                    </div>
+                </section>
+                
+                <section class="recomandation">
+                        <!--fichier à telechargé à gauche et des petit text à droit
+                        sur chacun d'eux-->
+                        
+                        <!--donc on partager notre section en deux comme dans la presentation-->
+                        <h1> Recommandation(lien à telecharger)</h1>
+                        <div class="sec">
+                            <div class="reco">
+                                <H2> lien pour se forger</H2>
+                                <div class="left">
+                                   <a href="mohamed_imame-html-css.docx" target="_blank"><img src="image/"> </a>
+                                   <!-- l'image de haut sert à une lien clicable-->
+                                </div>
+                                <div class="right">
+                                   <p> ce travail est fait par Mr  Mohamed qui sert à vous enrichir sur
+                                   le HTML&CSS</p>   
+                                </div>
+                            </div>
+                            <div class="reco">
+                               <H2> Formation sur l'inforatique bureautique</H2>
+                               <div class="left">
+                                  <a href="mohamed_imame-info_bur.docx" target="_blank"><img src="image/" ></a>
+                                  <!-- l'image de haut sert à une lien clicable-->
+                               </div>
+                               <div class="right">
+                                  <p> apprendre à manipuler le clavier, ecrire, mettre en forme est assuré par votre jeune homme mohamed  </p>   
+                               </div>
+                            </div>
+                       </div> 
+                </section>
+            </article>
+            <footer>  
+               <p>copyright 2023 mohmamed imame . toute reproduction est valable</p> 
+            </footer>
+        </body>
+    </html>

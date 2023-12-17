@@ -1,0 +1,198 @@
+bobody{
+    font-family: 'century othic', colibri, serif;
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+}
+header{
+    height: 100px;
+}
+footer{
+    height: 80px;
+    padding-top: 30px;
+    text-align: center;
+    background-color: #5c5c5c;
+    border-top: 2px solid #aaa;
+}
+nav{/*on l'etend sur toute la page*/
+    width: 100%;
+    background-color: #424558;
+}
+
+/*il faut ajouter ce risete,sinon certaine
+ *navigateur vont ajouter plus de margine et padding*/
+nav ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav li{
+    list-style-type: none;
+    float: left;/*il met les li en ligne*/
+}
+.table{ /*cntrer et rendre la hauteur*/
+    margin: 0 auto;
+    display: table; /*des element floter donc on applique ca,
+                     * pour qu'ils  retrouvent leurs hauteursses */ 
+}
+nav a{
+    display: inline-block;
+    padding: 20px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+}
+
+/*pour menu ,on applique un boder et un couleur de fond dans
+ *un hover ,pour que celui ci floate lorsqu'un utilisateur passe
+ *le souris*/
+
+.menu-ind:hover, .presentation{
+    border-top: 5px solid orange;
+    background-color: rgba(64, 200, 30, 0.15);
+}
+.menu-ex:hover, .parcours{
+    border-top: 5px solid orange;
+    background-color: rgba(14, 200, 190, 0.15);
+}
+.menu-loi:hover, .competences{
+    border-top: 5px solid orange;
+    background-color: rgba(68, 80, 130, 0.15);
+}
+.menu-cont:hover, .recomandation{
+    border-top: 5px solid orange;
+    background-color: rgba(104, 10, 100, 0.15);
+}
+
+/*si on passe sur nos element li il vole de 5px de plus ,
+ *on veut que ses 5px de couleurs de bordure reste immobile
+ *donc on selectionne a et on fait 15px vu qu'on les avait
+ *declaré 20px,, donc 15+5=20*/
+
+li:hover a{
+    padding: 15px 30px 20px 30px;
+}
+
+
+/*pour les section sans distinction*/
+section{
+    width: 100%;
+    min-height: 300px;/*hauteur minimal*/
+    padding-bottom: 10px;/* afin d'avoir un petit ecart*/ /*padding bas de chaque section*/
+    margin-bottom: 10px;/* afin d'avoir un ecrt entre les section*/
+}
+
+/*(pour sec)  on ajoute des marge sgauche et droite,afin de centrer le contenu a l'interieur
+ *de nos sections*/
+.sec{
+    margin: 0px 10%;/* le 10 de marge en % signifie 10% à de marge droit et 10% à de marge gauche
+                     * à chaque contenue de nos sections*/
+}
+
+/*on va floater les div right à droit et left à gauche avec des taille #
+ *et chacun des contenus doit etre cote à cote que son correspondance*/
+.left{
+    float: left;
+    width: 30%;
+}
+.right{
+    float: left;
+    width: 70%;
+}
+
+/*remarque dans les competances on l'a coupe en 2 et puis en 2
+ *pas comme les 3 autres qu'on les a couppé une fois
+ * au lieu de 70% on veut que chacune des ses partition occupe 25%de place disponible
+ * donc on donne 50% au div qui couppe en 2 (cleft et cright)et 50% de celui aui
+ * recouppe en 2 (sousleft et sousright)*/
+.cleft, .cright, .sousleft, .sousright{
+    width: 50%;
+    float: left;
+}
+
+/*ne sont pas floatant pourtant ils ont des enfants floatant
+ *donc ils vont collapser. on va utiliser  ::after en siblant les element patent*/
+.sec::after, .exp::after, .reco::after{
+    content: ""; /*cela signifie qu'il aura rien apres chaque section*/
+   display: table;
+   clear: both;
+}
+
+/*pour l'experience*/
+.orange{
+   border-top: 5px solid #e47d26;
+   background-color: rgba(228, 117, 38, 0.15);
+   margin-bottom: 0px;/*afin que les deux section soit coler l'une à l'autre*/
+}
+.rose{
+   border-top: 5px solid #e44d96;
+   background-color: rgba(1, 77, 200, 0.15);
+   margin-bottom: 0px;/*afin que les deux section soit coler l'une à l'autre*/
+}
+ 
+ /*pour les couleurs de loisir(un border et couleur de font)*/
+ .vert{
+   border-top: 5px solid #5f6;
+   background-color: rgba(70, 240, 80, 0.15);
+}
+.bleu{
+   border-top: 5px solid #29c;
+   background-color: rgba(0, 152, 212, 0.15);
+}
+.jaune{
+   border-top: 5px solid #f3e241;
+   background-color: rgba(240, 255, 69, 0.15);
+}
+
+.rouge{
+   border-top: 5px solid #e44d26;
+   background-color: rgba(200, 12, 22, 0.15);
+}  
+.leftexp{
+   width: 45%;
+   float: left;
+}
+.rightexp{
+   width: 50%;
+   float: left;
+   margin-left: 5%;/*45+50+5=100,on aura aucun problemme d'affichage*/
+}
+/*pour l'image du gauche on va le mettre à 100% de la taille du div*/
+.leftexp img{
+   width: 100%;
+   max-width: 400px; /*afin d'eviter qu'il se pixelise trop dans des ecrans tres grandes*/
+}
+
+.left img{
+   width: 50%;
+     max-width: 400px;
+}
+/*pour la responsivité*/
+/*cela etait en haut de la section mais c'etait appliqué pour toute le squelette de la page*/
+
+@media screen and (max-width: 780px){
+    header{
+        height: 50px;/*pour eviter qu'il prenne toute la taille d'un ecran de natel*/
+    }
+    h1{
+        font-size: 28px;
+        margin: 20px 0px 0px 0px;
+    }
+    h3{
+      font-size: 15px;/*c'est moi qui ai ajouté ça*/
+    }
+    nav li a{
+        font-size: 12px;
+        padding: 10px;
+    }
+    nav li:hover a{
+        padding: 5px 10px 10px 10px;/*avant ca etait 20 30 20 30*/
+        
+    }
+}

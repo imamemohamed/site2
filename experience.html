@@ -1,0 +1,69 @@
+<!DOTYPE html>
+    <html lang="fr-FR">
+        <head>
+            <title>acceuil</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="style.css">
+            <meta name="description" content="mes meuilleures expériences">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        </head>
+        <body>
+            <!--trois element struturant : divise le contenu du page )-->
+            <header>
+               <h1> Mohamed Imame</h1> 
+            </header>
+            <nav>
+                <div class="table"><!-- ce dive va nous permettre de centrer le menu et rendre sa hauteur
+                        car un element html possede des enfants qui sont foatant en css,la hauteur de cette element
+                          va egale à zero.donc on utilise diplay= valeur de class de div-->
+                    <ul>
+                        <!--menu- etc pour mettre chaque li sa forme specifique-->
+                        <li class="menu-ind">
+                            <a href="index.html">Acueil</a> 
+                        </li>
+                        <li class="menu-ex">
+                            <a href="experience.html">expériences<!-- professionnelles--></a>
+                        </li>
+                        <li class="menu-loi">
+                            <a href="ouff.html">Loisir</a>
+                        </li>
+                        <li class="menu-cont">
+                            <a href="contact.html">contactez-moi!</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <!-- on veut creer deux partie dans nos experiences avec chaque partie une
+            photo à gauche et un text à droit(donc on a besoin deux div parent de section
+            et dans ses div on va creer deux div . pour la partie droite et la partie gauche
+                    sans oublier le div de section)-->
+            <section class="orange">
+                    <h1>Mohamed-imame.com</h1>
+                    <div class="sec">
+                            <div class="leftexp">
+                                <a href="je doit creer mon cite htttp"><img src="" alt="mon site"></a>
+                            </div>
+                            <div class="rightexp">
+                               <p>creation des supports afin d'enrichir votre programmation et comment quelque solution
+                               des certains panes de vos machine</p> 
+                            </div>
+                    </div>
+            </section>
+            <section class="rose">
+                    <h1>nananan</h1>
+                    <div class="sec">
+                            <div class="leftexp">
+                                <a href="un site à creer" target="_blank"><img src="nana" alt="oui"></a>  
+                            </div>
+                            <div class="rightexp">
+                               <p>naannnanannnan</p>  
+                            </div>
+                    </div>
+            </section>
+            
+            <footer>  
+               <p>copyright 2023 mohmamed imame . toute reproduction est valable</p> 
+            </footer>
+        </body>
+    </html>
